@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/EasyReminder.Core/EasyReminder.Core.csproj" />
+    <Project Path="src/EasyReminder.Infrastructure/EasyReminder.Infrastructure.csproj" />
+    <Project Path="src/EasyReminder.Web/EasyReminder.Web.csproj" />
+    <Project Path="src/EasyReminder.Worker/EasyReminder.Worker.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/EasyReminder.Core.Tests/EasyReminder.Core.Tests.csproj" />
+    <Project Path="tests/EasyReminder.IntegrationTests/EasyReminder.IntegrationTests.csproj" />
+  </Folder>
+</Solution>
