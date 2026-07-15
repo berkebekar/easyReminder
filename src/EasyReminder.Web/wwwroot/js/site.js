@@ -1,4 +1,14 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿document.querySelectorAll("[data-counter-for]").forEach((counter) => {
+    const field = document.getElementById(counter.dataset.counterFor);
 
-// Write your JavaScript code.
+    if (!field) {
+        return;
+    }
+
+    const updateCounter = () => {
+        counter.textContent = `${field.value.length}/${field.maxLength}`;
+    };
+
+    field.addEventListener("input", updateCounter);
+    updateCounter();
+});
