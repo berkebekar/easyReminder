@@ -1,4 +1,10 @@
+using EasyReminder.Infrastructure.Persistence;
+using Microsoft.EntityFrameworkCore;
+
+
 var builder = WebApplication.CreateBuilder(args);
+string connectionString = builder.Configuration.GetConnectionString("PostgreSql") ?? throw new InvalidOperationException("PostgreSQL bağlantı bilgisi bulunamadı.");
+builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql(connectionString, npgsqlOptions => npgsqlOptions.UseNodaTime()));
 
 // Add services to the container.
 builder.Services.AddRazorPages();
